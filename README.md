@@ -2,6 +2,11 @@
 
 Este projeto fornece uma API baseada em FastAPI que carrega um modelo LSTM treinado para prever o preço de ações (PETR3.sa) para 10 dias à frente. A API expõe um endpoint "/predict" que recebe pelo menos 60 preços históricos e retorna 10 valores de previsão em uma única chamada.
 
+Link:
+
+https://github.com/cesarmontenegrosilva/API_Previsao_Acoes.git
+
+
 ## Descrição
 
 - Script Principal: api.py
