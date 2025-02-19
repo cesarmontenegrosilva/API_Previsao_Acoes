@@ -8,6 +8,7 @@ Github
 https://github.com/cesarmontenegrosilva/API_Previsao_Acoes.git
 
 Youtube: 
+https://youtu.be/fU_9ib81b20
 
 
 Link API: 
