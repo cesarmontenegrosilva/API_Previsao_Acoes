@@ -41,7 +41,7 @@ https://api-previsao-acoes.onrender.com
 1. Clone o repositório:
 
    git clone API_Previsao_Acoes
-   cd API_Previsao_Acoes
+   
 
 2. Crie e ative um ambiente virtual (opcional):
 
