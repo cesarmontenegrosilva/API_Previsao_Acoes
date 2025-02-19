@@ -1,18 +1,24 @@
 # API de Previsão de Ações com LSTM
 
-Este projeto fornece uma API baseada em FastAPI que carrega um modelo LSTM treinado para prever o preço de ações (PETR3.sa) para 10 dias à frente. A API expõe um endpoint "/predict" que recebe pelo menos 60 preços históricos e retorna 10 valores de previsão em uma única chamada.
+Este projeto fornece uma API baseada em FastAPI que carrega um modelo LSTM treinado para prever o preço de ações (PETR3.SA) para 10 dias à frente. A API expõe um endpoint "/predict" que recebe pelo menos 60 preços históricos e retorna 10 valores de previsão em uma única chamada.
 
-Link:
+Links:
 
+Github
 https://github.com/cesarmontenegrosilva/API_Previsao_Acoes.git
 
-Link API: https://api-previsao-acoes.onrender.com
+Youtube: 
+
+
+Link API: 
+https://api-previsao-acoes.onrender.com
 
 
 
 ## Descrição
 
 - Script Principal: api.py
+
 - Funcionalidades:
   - Carrega o modelo LSTM treinado (lstm_model_petr3.h5) que espera uma entrada no formato (1, 60, 1) e retorna uma previsão com formato (1, 10).
   - Carrega um objeto "scaler" (armazenado em scaler.pkl) para normalização dos dados.
@@ -22,34 +28,30 @@ Link API: https://api-previsao-acoes.onrender.com
 ## Pré-requisitos
 
 - Python 3.8+
-- FastAPI (https://fastapi.tiangolo.com/)
-- TensorFlow (https://www.tensorflow.org/)
-- Uvicorn (https://www.uvicorn.org/)
-- Pydantic (https://pydantic-docs.helpmanual.io/)
-- psutil (https://psutil.readthedocs.io/)
-- NumPy (https://numpy.org/)
-- (Opcional) scikit-learn, se o scaler foi criado com ele
+- FastAPI 
+- TensorFlow 
+- Uvicorn 
+- Pydantic 
+- psutil 
+- NumPy 
+- scikit-learn
 
 ## Instalação
 
 1. Clone o repositório:
 
-   git clone <URL_DO_REPOSITÓRIO>
-   cd <NOME_DO_REPOSITÓRIO>
+   git clone API_Previsao_Acoes
+   cd API_Previsao_Acoes
 
-2. Crie e ative um ambiente virtual (opcional, mas recomendado):
+2. Crie e ative um ambiente virtual (opcional):
 
    python -m venv venv
-   source venv/bin/activate   # Linux/Mac
-   venv\Scripts\activate      # Windows
+   
+   venv\Scripts\activate      
 
 3. Instale as dependências:
 
-   pip install fastapi uvicorn tensorflow psutil numpy pydantic
-
-   Se necessário, instale também o scikit-learn:
-
-   pip install scikit-learn
+   pip install -r requirements.txt
 
 ## Arquivos Necessários
 
@@ -94,15 +96,6 @@ O middleware da API adiciona os seguintes headers nas respostas HTTP:
 - X-Memory-Usage: Uso de memória (em MB) ao final da requisição.
 - X-Memory-Usage-Diff: Diferença no uso de memória (em MB) durante a requisição.
 
-## Troubleshooting
 
-- Erro ao carregar o modelo ou scaler: Verifique se os arquivos "lstm_model_petr3.h5" e "scaler.pkl" estão no mesmo diretório que "api.py" e se os nomes estão corretos.
-- Formato dos dados: Certifique-se de enviar pelo menos 60 preços históricos no endpoint /predict.
 
-## Contato
 
-Caso tenha dúvidas ou sugestões, sinta-se à vontade para abrir uma issue ou entrar em contato.
-
-## Licença
-
-Este projeto está licenciado sob [Nome da Licença] - veja o arquivo LICENSE para mais detalhes.
